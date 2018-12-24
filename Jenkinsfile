@@ -4,18 +4,18 @@ node {
     // some block
     git credentialsId: '708054d1-5926-426a-b16e-98a956a78cf3', url: 'https://github.com/ugreddy/spring-petclinic.git'
     }
-    stage('scm') {
+    stage('--clean--') {
    
      bat 'mvn clean'
     }
     
-    stage('scm') {
+    stage('--test--') {
    
      bat 'mvn test'
     }
     
     
-    stage('scm') {
+    stage('--package--') {
    
      bat 'mvn package'
     }
